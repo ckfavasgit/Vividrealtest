@@ -31,7 +31,7 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
                 @if ($company->logo)
-                    <img src="{{ asset('storage/' . $company->logo) }}" height="50" />
+                    <img src="{{ $company->logo }}" height="50" />
                 @endif
             </div>
 

@@ -10,7 +10,7 @@
                 <h5 class="card-title">{{ $company->name }}</h5>
                 <p class="card-text">Email: {{ $company->email }}</p>
                 <p class="card-text">Website: {{ $company->website }}</p>
-                <p class="card-text">Logo: <img src="{{ asset('storage/' . $company->logo) }}" height="50" /></p>
+                <p class="card-text">Logo: <img src="{{ $company->logo }}" height="50" /></p>
             </div>
         </div>
 

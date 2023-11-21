@@ -15,4 +15,10 @@ class Company extends Model
         'logo',
         'website',
     ];
+
+    public function getLogoAttribute($value)
+    {
+        // Prepend the asset path to the logo value
+        return asset('storage/' . $value);
+    }
 }

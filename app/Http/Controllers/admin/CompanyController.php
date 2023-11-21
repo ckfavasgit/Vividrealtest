@@ -19,8 +19,8 @@ class CompanyController extends Controller
             $data = Company::latest()->get();
             return Datatables::of($data)
                 ->addColumn('logo', function ($company) {
-                    $logoPath = asset('storage/' . $company->logo);
-                    return '<img src="' . $logoPath . '" height="50"/>';
+                    //$logoPath = asset('storage/' . $company->logo);
+                    return '<img src="' . $company->logo . '" height="50"/>';
                 })
                 ->addColumn('action', function ($company) {
                     $viewUrl = route('companies.show', $company->id);
